@@ -6,7 +6,7 @@
 package view;
 
 import java.awt.Color;
-import tp6.DirTelefonico;
+import AlcarazMelanyTP6.DirTelefonico;
 
 /**
  *

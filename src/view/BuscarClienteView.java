@@ -6,8 +6,8 @@
 package view;
 
 import javax.swing.JOptionPane;
-import tp6.Clientes;
-import tp6.DirTelefonico;
+import AlcarazMelanyTP6.Clientes;
+import AlcarazMelanyTP6.DirTelefonico;
 
 /**
  *

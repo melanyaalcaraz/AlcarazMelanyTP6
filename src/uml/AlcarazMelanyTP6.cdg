@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AlcarazMelanyTP6">
+  <ClassDiagramComponents>
+    <Class name="Clientes" package="tp6" visibility="public" xPosition="20.0" yPosition="64.0">
+      <Fields>
+        <Field name="dni" type="long" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="ciudad" type="String" visibility="private"/>
+        <Field name="domicilio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="long" name="dni"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="String" name="ciudad"/>
+          <Argument type="String" name="domicilio"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setDni" returnType="void" visibility="public">
+          <Argument type="long" name="dni"/>
+        </Method>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="setCiudad" returnType="void" visibility="public">
+          <Argument type="String" name="cuidad"/>
+        </Method>
+        <Method name="setDomicilio" returnType="void" visibility="public">
+          <Argument type="String" name="domicilio"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="getCiudad" returnType="String" visibility="public"/>
+        <Method name="getDni" returnType="long" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DirTelefonico" package="tp6" visibility="public" xPosition="631.0" yPosition="273.0">
+      <Fields>
+        <Field name="directorio" type="TreeMap&lt;Long, Clientes&gt;" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="agregarCliente" returnType="boolean" visibility="public">
+          <Argument type="long" name="telefono"/>
+          <Argument type="Clientes" name="cliente"/>
+        </Method>
+        <Method name="buscarCliente" returnType="Clientes" visibility="public">
+          <Argument type="long" name="telefono"/>
+        </Method>
+        <Method name="buscarTelefono" returnType="List&lt;Long&gt;" visibility="public">
+          <Argument type="Clientes" name="apellido"/>
+        </Method>
+        <Method name="buscarClientes" returnType="List&lt;Clientes&gt;" visibility="public">
+          <Argument type="String" name="ciudad"/>
+        </Method>
+        <Method name="borrarCliente" returnType="Clientes" visibility="public">
+          <Argument type="long" name="telefono"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Test" package="tp6" visibility="public" xPosition="760.0" yPosition="64.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="directorio" source="tp6.DirTelefonico" target="tp6.Clientes" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="TreeMap&lt;Long, Clientes&gt;"/>
+    <UseRelation source="tp6.DirTelefonico" target="tp6.Clientes" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

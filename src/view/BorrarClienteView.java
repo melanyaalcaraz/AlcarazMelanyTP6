@@ -6,7 +6,7 @@
 package view;
 
 import javax.swing.JOptionPane;
-import tp6.Clientes;
+import AlcarazMelanyTP6.Clientes;
 import static view.NewView.directorio;
 
 /**
